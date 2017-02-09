@@ -3,11 +3,17 @@
 <head>
 	<title></title>
 
-	<!-- Latest compiled and minified CSS -->
+<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- custom CSS -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -15,11 +21,41 @@
 </head>
 <body>
 
-	<div class="container">
-		<div class="row">
-			
+<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <ul class="nav nav-pills nav-justified">
+			<li><a href="#">Return to the Game!</a></li>
+			<li><a href="#">See Standings</a></li>
+		</ul>
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<!-- End Navigation -->
+
+<div class="container">
+	<div class="row">
+		<div class="greeting">
+			<h1>Electric or Not?</h1>
+				<%if (typeof msg !== 'undefined') { %>				
+					<h1>Voted on all!</h1>
+				<% } 
+				else { %>
+					<div class="image text-center">
+						<img class="image-card" src="<%= imageToRender %>";
+					</div>
+				
+					<div class="voting-buttons text-center">
+						<a class="vote-button vote-electric" href="/vote/up/<%= imageID %>">
+							<input type="submit" class="btn btn-success" value="Electric!" />
+						</a>
+						<a class="vote-button vote-not-electric" href="/vote/down/<%= imageID %>">
+							<input type="submit" class="btn btn-danger" value="Not Electric!" />
+						</a>
+					</div>
+				<% } %>
 		</div>
 	</div>
+</div>
 
 </body>
 </html>

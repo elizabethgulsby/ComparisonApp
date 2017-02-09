@@ -1,4 +1,71 @@
-/* line 6, ../../compass/sass/views/_home.scss */
-* {
-  color: black;
+/* line 1, ../../compass/sass/styles.scss */
+.navbar {
+  position: absolute;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+/* line 7, ../../compass/sass/styles.scss */
+.navbar li a {
+  position: relative;
+  display: block;
+}
+
+/* line 14, ../../compass/sass/styles.scss */
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 21, ../../compass/sass/styles.scss */
+.nav-justified {
+  width: 100%;
+}
+/* line 23, ../../compass/sass/styles.scss */
+.nav-justified li a {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* line 29, ../../compass/sass/styles.scss */
+.container {
+  text-align: center;
+}
+
+/* line 34, ../../compass/sass/styles.scss */
+h1 {
+  margin-top: 60px;
+}
+
+/* line 39, ../../compass/sass/styles.scss */
+img {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 44, ../../compass/sass/styles.scss */
+.voting-buttons {
+  margin-bottom: 10px;
+  width: 350px;
+  overflow: hidden;
+  margin: auto;
+}
+/* line 50, ../../compass/sass/styles.scss */
+.voting-buttons .vote-not-electric {
+  float: right;
+  margin-left: 50px;
+}
+
+/* line 57, ../../compass/sass/styles.scss */
+.vote-button {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+
+/* line 64, ../../compass/sass/styles.scss */
+button {
+  margin: 20px;
 }
