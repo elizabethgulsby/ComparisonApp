@@ -22,15 +22,13 @@
 <body>
 
 <!-- Navigation -->
-	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <ul class="nav nav-pills nav-justified">
-			<li><a href="#">Return to the Game!</a></li>
-			<li><a href="#">See Standings</a></li>
+			<li role="presentation"><a href="/">Return to the Game!</a></li>
+			<li role="presentation"><a href="/standings">See Standings</a></li>
 		</ul>
 	  </div><!-- /.container-fluid -->
-	</nav>
-	<!-- End Navigation -->
+<!-- End Navigation -->
 
 <div class="container">
 	<div class="row">
@@ -43,6 +41,8 @@
 					<div class="image text-center">
 						<img class="image-card" src="<%= imageToRender %>";
 					</div>
+
+					
 				
 					<div class="voting-buttons text-center">
 						<a class="vote-button vote-electric" href="/vote/up/<%= imageID %>">
